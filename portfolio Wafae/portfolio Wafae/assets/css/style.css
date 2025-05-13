@@ -1,0 +1,222 @@
+:root {
+  --main-color: #6a0dad;
+  --accent-color: #bb86fc;
+  --text-color: #1a1a1a;
+  --background-color: #fef9ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  position : sticky;
+  top :0;
+  z-index : 1000;
+  
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid var(--accent-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: var(--main-color);
+  text-align : center;
+  margin-bottom: 0.5rem;
+}
+
+.passions-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 0;
+}
+
+.passions-list li {
+  background-color: white;
+  border: 1px solid var(--accent-color);
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.passions:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+#parcours {
+  background-color: #fff;
+  padding: 4rem 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--accent-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+}
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+.timeline-item p {
+  margin: 0.3rem 0 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+
+
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}
